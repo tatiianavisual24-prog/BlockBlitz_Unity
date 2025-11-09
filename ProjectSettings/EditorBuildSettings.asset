@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/1.Pantalla Juego.unity
+    guid: 88fc3bb648b84154590881e1e576ab8f
+  - enabled: 1
+    path: Assets/Scenes/2.Menu inicial.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: "Assets/Scenes/3.Misi\xF3n.unity"
+    guid: bc8a88cef69580e48988f192711c134d
+  - enabled: 1
+    path: Assets/Scenes/4.Instrucciones.unity
+    guid: 94d825452a48b66409a5c47a6512aadc
+  - enabled: 1
+    path: Assets/Scenes/5.Manejadores.unity
+    guid: 749a7b147d69e79409c5de237ee345db
+  - enabled: 1
+    path: Assets/Scenes/6.Campo de juego.unity
+    guid: 4b66e456772c8e442b9054d3961ad95e
   m_configObjects: {}
