@@ -1,31 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class playerscript : MonoBehaviour
 {
     public Rigidbody rb;
-    public float fordwardSepeed;
-    public float SideForce;
+    public float forwardSpeed = 5f;
+    public float sideForce = 5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [HideInInspector]
+    public bool canMove = true;   // El manager lo pondrá en false al inicio
 
-    // Update is called once per frame
     void Update()
     {
-        rb.AddForce(new Vector3(0, 0, fordwardSepeed) * Time.deltaTime);
+        if (!canMove)
+            return; // 🔒 Si está bloqueado, no hace nada
 
+        // Hacia adelante
+        rb.AddForce(new Vector3(0, 0, forwardSpeed) * Time.deltaTime);
+
+        // Izquierda
         if (Input.GetKey(KeyCode.A))
-        {
-            rb.AddForce(new Vector3(-SideForce, 0, 0) * Time.deltaTime);
-        }
+            rb.AddForce(new Vector3(-sideForce, 0, 0) * Time.deltaTime);
+
+        // Derecha
         if (Input.GetKey(KeyCode.D))
-        {
-            rb.AddForce(new Vector3(SideForce, 0, 0) * Time.deltaTime);
-        } 
+            rb.AddForce(new Vector3(sideForce, 0, 0) * Time.deltaTime);
     }
 }
