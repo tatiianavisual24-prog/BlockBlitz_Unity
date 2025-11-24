@@ -8,23 +8,23 @@ public class MenuInicial : MonoBehaviour
 {
     public void CambiarAMision()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("3.Misión");
 
     }
 
     public void CambiarAInstrucciones()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("4.Instrucciones");
 
     }
     public void CambiarAManejadores()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("5.Manejadores");
 
     }
     public void CambiarACampoDeJuego()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        SceneManager.LoadScene("6.Campo de juego");
 
     }
 
