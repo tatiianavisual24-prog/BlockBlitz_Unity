@@ -27,5 +27,10 @@ public class MenuInicial : MonoBehaviour
         SceneManager.LoadScene("6.Campo de juego");
 
     }
+    public void CambiarAPantallaJuego()
+    {
+        SceneManager.LoadScene("1.Pantalla Juego");
+
+    }
 
 }
