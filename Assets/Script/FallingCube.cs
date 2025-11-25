@@ -18,6 +18,11 @@ public class FallingCube : MonoBehaviour
     [Header("FX")]
     public GameObject poofFX;   // Prefab del efecto
 
+    [Header("Monedas")]
+    public GameObject coinPrefab;   // ← arrastras aquí el prefab de la moneda
+    public int coinsToSpawn = 3;    // ← cuántas monedas saldrán del bloque
+    public float coinSpawnHeight = 1.2f; // ← qué tan arriba del bloque salen
+
     // Estado interno
     private Vector3 target;
     private bool isFalling = false;
@@ -26,6 +31,8 @@ public class FallingCube : MonoBehaviour
     private bool isBumping = false;
     private bool isBroken = false;
     private int hitCount = 0;
+
+    private int coinsSpawned = 0;   // ← cuántas monedas ya salieron
 
     void Start()
     {
@@ -79,7 +86,7 @@ public class FallingCube : MonoBehaviour
         {
             Instantiate(
                 poofFX,
-                transform.position + Vector3.up * 0.6f,   // ← subido para que NO quede dentro del cubo
+                transform.position + Vector3.up * 0.6f,
                 Quaternion.identity
             );
         }
@@ -88,6 +95,14 @@ public class FallingCube : MonoBehaviour
         hitCount++;
 
         Debug.Log($"Golpe {hitCount}/{maxHits} en {gameObject.name}");
+
+        // ---- MONEDA: sacar hasta 3 veces ----
+        if (coinPrefab != null && coinsSpawned < coinsToSpawn)
+        {
+            Vector3 spawnPos = transform.position + Vector3.up * coinSpawnHeight;
+            Instantiate(coinPrefab, spawnPos, Quaternion.identity);
+            coinsSpawned++;
+        }
 
         if (hitCount >= maxHits)
         {
