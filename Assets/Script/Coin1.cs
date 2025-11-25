@@ -4,12 +4,11 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [Header("Movimiento al salir del bloque")]
-    public float riseHeight = 1f;      // cuánto sube la moneda
-    public float riseSpeed = 6f;       // velocidad de subida
-    public float visibleTime = 0.25f;  // tiempo que queda arriba antes de desaparecer
-
+    public float riseHeight = 1f;      
+    public float riseSpeed = 6f;      
+    public float visibleTime = 0.25f;  
     [Header("Sonido")]
-    public AudioClip coinClip;         // puedes arrastrar aquí el sonido de moneda
+    public AudioClip coinClip;         
 
     private Vector3 startPos;
     private Vector3 upPos;
@@ -17,16 +16,16 @@ public class Coin : MonoBehaviour
 
     private void Awake()
     {
-        // Intentar obtener un AudioSource existente
+       
         audioSource = GetComponent<AudioSource>();
 
-        // Si no hay, creamos uno para que nunca falle
+      
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // Aseguramos que el audio sea 2D y audible
+  
         audioSource.spatialBlend = 0f;
         audioSource.volume = 1f;
     }
@@ -36,13 +35,13 @@ public class Coin : MonoBehaviour
         startPos = transform.position;
         upPos = startPos + Vector3.up * riseHeight;
 
-        // Si el AudioSource no tiene clip pero coinClip sí, se lo asignamos
+ 
         if (audioSource.clip == null && coinClip != null)
         {
             audioSource.clip = coinClip;
         }
 
-        // Reproducir el sonido si hay clip
+  
         if (audioSource.clip != null)
         {
             audioSource.PlayOneShot(audioSource.clip);
@@ -52,7 +51,7 @@ public class Coin : MonoBehaviour
             Debug.LogWarning("Coin: no hay AudioClip asignado en el prefab.", this);
         }
 
-        // Animación de subida + desaparición
+  
         StartCoroutine(RiseAndDisappear());
     }
 

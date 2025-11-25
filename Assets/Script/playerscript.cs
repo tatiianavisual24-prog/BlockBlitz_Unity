@@ -7,7 +7,7 @@ public class playerscript : MonoBehaviour
     public float sideForce = 5f;
 
     [HideInInspector]
-    public bool canMove = true;   // El manager lo pondrá en false al inicio
+    public bool canMove = true;   
 
     void Update()
     {
