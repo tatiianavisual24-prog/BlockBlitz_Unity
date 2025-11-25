@@ -49,7 +49,7 @@ public class TimerCountdown : MonoBehaviour
             timeRemaining = 0f;
             timerRunning = false;
 
-            // Avisar al manager que se acabó el tiempo
+           
             if (StartTextManager.Instance != null)
             {
                 StartTextManager.Instance.FinishGame();
