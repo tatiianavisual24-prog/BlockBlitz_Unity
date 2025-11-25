@@ -1993,8 +1993,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "INSTRUCCIONES\n\nhfkjshdkfjhsdfj  lsdskjf\nlfalsjflkasjf n,asf kjkjsf\nfkjslkfjalksfj\njsalkfjlaskjf\n<f\xF1skldfkas\xF1lkf 
-    \xF1lskfsf\nmslkfjasjflkaj\nsjflkajsflkasjfk\nsafkjlaskjflaskfjlsakjf"
+  m_text: "INSTRUCCIONES\n\nLa finalidad del juego es mover el personaje a todos
+    los cubos y saltar cuando est\xE9 debajo de ellos para descargar todas las monedas
+    que guarda y finalizar antes de que el cronometro llegue a cero"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2131,7 +2132,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.20038268, g: 0.5377358, b: 0.30714005, a: 1}
+    m_NormalColor: {r: 0.9675354, g: 0.9811321, b: 0.38412246, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
